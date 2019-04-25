@@ -1,5 +1,5 @@
-FROM jenkins/jenkins:lts
-MAINTAINER miiro@getintodevops.com
+FROM jenkins/jenkins:lts-jdk11
+MAINTAINER lvkai@live.com
 USER root
 
 # Install the latest Docker CE binaries
@@ -15,5 +15,6 @@ RUN apt-get update && \
       $(lsb_release -cs) \
       stable" && \
    apt-get update && \
-   apt-get -y install docker-ce
+   apt-get -y install docker-ce --allow-unauthenticated
 
+USER jenkins

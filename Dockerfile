@@ -1,5 +1,5 @@
 FROM jenkins/jenkins:lts-jdk11
-MAINTAINER lvkai@live.com
+MAINTAINER lvkai79@gmail.com
 USER root
 
 # Install the latest Docker CE binaries
